@@ -1,0 +1,49 @@
+.company {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.company__layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.company__table {
+  margin: 0;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.company__row {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: 1.15rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.company__row dt {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-400);
+}
+
+.company__row dd {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-charcoal);
+}
+
+@media (min-width: 768px) {
+  .company__layout {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .company__row {
+    grid-template-columns: 8rem 1fr;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding-block: 1.35rem;
+  }
+}
