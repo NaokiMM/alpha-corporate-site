@@ -7,12 +7,12 @@ export function About() {
         <div className="about__intro">
           <span className="section-label">About</span>
           <h2 id="about-heading" className="section-title">
-            株式会社Alphaについて
+            株式会社 alphaについて
           </h2>
         </div>
         <div className="about__body">
           <p>
-            株式会社Alphaは、美容事業を起点としながら、特定の業種にとらわれず、
+            株式会社 alphaは、美容事業を起点としながら、特定の業種にとらわれず、
             複数の事業領域へ挑戦していく会社です。
           </p>
           <p>

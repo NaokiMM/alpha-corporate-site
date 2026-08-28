@@ -8,15 +8,15 @@ export function Hero() {
         <img
           className="hero__brand"
           src="/images/logo-alpha.png"
-          alt="Alpha"
+          alt=" alpha"
           width={280}
           height={130}
         />
         <h1 id="hero-heading" className="hero__title">
-          人と事業の可能性を、形に。
+          すべての人生に、+alphaを。
         </h1>
         <p className="hero__lead">
-          株式会社Alphaは、美容事業を起点に、新しい価値を生み出す会社です。
+          株式会社 alphaは、美容を起点として関わる人の人生に「+alphaの価値」を届ける会社です。
         </p>
         <div className="hero__actions">
           <a className="btn btn-primary" href="#business">

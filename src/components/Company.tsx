@@ -6,9 +6,9 @@ interface CompanyRow {
 }
 
 const COMPANY_ROWS: CompanyRow[] = [
-  { label: '会社名', value: '株式会社Alpha' },
-  { label: '所在地', value: '準備中' },
-  { label: '代表者', value: '準備中' },
+  { label: '会社名', value: '株式会社 alpha' },
+  { label: '所在地', value: '東京都新宿区新宿３-14-23　新宿マヤビル ６F' },
+  { label: '代表者', value: '木村奏也' },
   { label: '設立', value: '準備中' },
   { label: '事業内容', value: '美容事業ほか' },
 ]
@@ -27,7 +27,7 @@ export function Company() {
             会社概要
           </h2>
           <p className="section-lead">
-            株式会社Alphaの基本情報です。詳細は順次公開してまいります。
+            株式会社 alphaの基本情報です。詳細は順次公開してまいります。
           </p>
         </div>
 

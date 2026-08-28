@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <p className="footer__copy">© {year} Alpha Co., Ltd.</p>
+        <p className="footer__copy">© {year}  alpha Co., Ltd.</p>
       </div>
     </footer>
   )

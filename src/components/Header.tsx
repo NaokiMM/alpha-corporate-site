@@ -34,7 +34,7 @@ export function Header() {
     <header className={`header${isScrolled ? ' header--scrolled' : ''}`}>
       <div className="header__inner container">
         <a href="#top" className="header__logo" onClick={closeMenu}>
-          <img src="/images/logo-alpha.png" alt="Alpha" width={120} height={56} />
+          <img src="/images/logo-alpha.png" alt=" alpha" width={120} height={56} />
         </a>
 
         <nav className="header__nav" aria-label="メインナビゲーション">
