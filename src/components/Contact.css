@@ -1,25 +1,116 @@
-.contact {
-  background-color: var(--color-off-white);
+.contact.section {
+  background-color: var(--body-bg);
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
 }
 
-.contact__panel {
-  max-width: 40rem;
+.contact__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact__topic-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-400);
+  margin-bottom: 0.85rem;
+}
+
+.contact__choices {
+  border-top: 1px solid var(--body-line);
+}
+
+.contact__choice {
+  display: block;
+  width: 100%;
+  padding-block: 1.15rem;
   text-align: left;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--body-text);
+  border-bottom: 1px solid var(--body-line);
+  transition: color 0.25s var(--ease-out);
+}
+
+.contact__choice:hover {
+  color: var(--accent-color);
+}
+
+.contact__choice.is-selected {
+  color: var(--accent-color);
 }
 
 .contact__text {
-  color: var(--color-gray-600);
+  color: var(--body-muted);
   font-weight: 300;
   font-size: 1.05rem;
-  margin-bottom: 1.5rem;
+  max-width: 36rem;
 }
 
-.contact__note {
+.contact__call {
+  margin-top: 2.5rem;
+}
+
+.contact__phone {
   display: inline-block;
-  padding: 0.85rem 1.25rem;
-  border-left: 2px solid var(--accent-color);
-  background-color: var(--accent-color-soft);
-  color: var(--color-charcoal);
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
+  margin-top: 1.15rem;
+  font-size: 1.45rem;
+  letter-spacing: 0.06em;
+  color: var(--body-text);
+  border-bottom: 1px solid var(--body-line);
+  transition: border-color 0.25s var(--ease-out);
+}
+
+.contact__phone:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.contact__table {
+  margin: 2.25rem 0 0;
+  border-top: 1px solid var(--body-line);
+}
+
+.contact__row {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: 1.15rem;
+  border-bottom: 1px solid var(--body-line);
+}
+
+.contact__row dt {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-400);
+}
+
+.contact__row dd {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--body-text);
+}
+
+.contact__tel {
+  display: inline-block;
+  border-bottom: 1px solid var(--body-line);
+  transition: border-color 0.25s var(--ease-out);
+}
+
+.contact__tel:hover {
+  border-bottom-color: var(--body-text);
+}
+
+@media (min-width: 768px) {
+  .contact__choice {
+    padding-block: 1.35rem;
+  }
+
+  .contact__row {
+    grid-template-columns: 8rem 1fr;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding-block: 1.35rem;
+  }
 }
