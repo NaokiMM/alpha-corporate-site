@@ -132,21 +132,25 @@ export function Company() {
       className="section company"
       aria-labelledby="company-heading"
     >
+      <div className="company__media">
+        <video autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+          <source
+            src="/video/3051316-hd_1920_1080_24fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="company__veil" aria-hidden="true" />
+        <div className="company__media-copy">
+          <span className="company__media-en">Company</span>
+          <h1 id="company-heading" className="company__media-title">
+            会社情報
+          </h1>
+        </div>
+      </div>
+
       <div className="container company__layout">
         <div className="company__intro">
-          <span className="section-label">Company</span>
-          <h2 id="company-heading" className="section-title">
-            会社概要
-          </h2>
-          <div className="company__portrait">
-            <img
-              src="/images/kimura-soya.jpg"
-              alt="代表 木村奏也"
-              width={800}
-              height={1000}
-            />
-            <p className="company__portrait-name">代表　木村奏也</p>
-          </div>
+          <h2 className="section-title">会社概要</h2>
         </div>
 
         <dl className="company__table">

@@ -1,11 +1,85 @@
 .company {
   background-color: var(--body-bg);
   border-bottom: 1px solid var(--body-text);
+  padding-block: 0 var(--section-pad-y);
+}
+
+.company__media {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  height: min(62vh, 38rem);
+  background-color: var(--body-bg);
+}
+
+.company__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.company__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 12, 11, 0.42) 0%,
+      rgba(13, 12, 11, 0.12) 38%,
+      rgba(13, 12, 11, 0) 62%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(13, 12, 11, 0.28) 0%,
+      rgba(13, 12, 11, 0.08) 36%,
+      rgba(13, 12, 11, 0.12) 100%
+    );
+}
+
+.company__media-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100% - (var(--section-pad-x) * 2), var(--content-width));
+  margin-inline: auto;
+  padding-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding-bottom: 2rem;
+}
+
+.company__media-en {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.company__media-title {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  color: #ffffff;
+  margin: 0;
 }
 
 .company__layout {
   display: grid;
   gap: 2.5rem;
+  padding-top: var(--section-pad-y);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company__media video {
+    display: none;
+  }
 }
 
 .company__table {
@@ -139,30 +213,6 @@
   margin: 0;
   font-size: 1.05rem;
   color: var(--body-text);
-}
-
-.company__portrait {
-  margin-top: 1.5rem;
-  max-width: 18rem;
-  text-align: center;
-}
-
-.company__portrait img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center 16%;
-}
-
-.company__portrait-name {
-  margin-top: 0.9rem;
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--body-text);
-  text-align: center;
 }
 
 @media (min-width: 768px) {
