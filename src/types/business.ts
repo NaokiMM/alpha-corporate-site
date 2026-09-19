@@ -7,4 +7,23 @@ export interface BusinessItem {
   status: BusinessStatus
   imageSrc?: string
   imageAlt?: string
+  imageFit?: 'cover' | 'contain' | 'original'
+  points?: string[]
+  stackTitle?: string
+  stack?: string[]
+  details?: {
+    label: string
+    value: string
+    note?: string
+  }[]
+  link?: {
+    href: string
+    label: string
+  }
+  award?: {
+    imageSrc: string
+    imageAlt: string
+    rank: string
+    title: string
+  }
 }
