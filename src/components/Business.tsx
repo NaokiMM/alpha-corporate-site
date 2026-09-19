@@ -53,7 +53,7 @@ function AwsIcon() {
 }
 
 function StackIcon({ name }: { name: string }) {
-  if (name.startsWith('AWS')) return <AwsIcon />
+  if (name.startsWith('AWS') || name.startsWith('Amazon')) return <AwsIcon />
   if (name.startsWith('Google')) return <GoogleIcon />
   return null
 }
@@ -111,6 +111,7 @@ const BUSINESS_ITEMS: BusinessItem[] = [
       'Google Apps Script',
       'Google Drive API',
       'Google Cloud Platform',
+      'Amazon Web Services',
       'AWS Route53',
     ],
   },
