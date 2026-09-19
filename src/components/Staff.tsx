@@ -69,16 +69,6 @@ const STAFF_MEMBERS: StaffMember[] = [
     tags: ['メンズ'],
     comment: '「美容」も「おしゃれ」もお任せください。',
   },
-  {
-    id: 'miseki-towa',
-    name: '三関永遠',
-    nameEn: 'Towa Miseki',
-    role: 'アシスタント',
-    imageSrc: '/images/miseki-towa.jpg',
-    imageAlt: 'アシスタント 三関永遠',
-    tags: ['メンズ'],
-    comment: '髪を通して笑顔にする『カミスマイル』をご提供します。',
-  },
 ]
 
 function groupByRole(members: StaffMember[]) {

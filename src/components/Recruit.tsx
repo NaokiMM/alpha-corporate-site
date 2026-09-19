@@ -43,13 +43,6 @@ const STAFF_VOICES = [
     imageSrc: '/images/kanzaki-mitsuki.jpg',
     text: 'おしゃれを追うだけでなく、人と誠実に接する姿勢が土台になっている。その前提があるから、毎日のサロンワークにも緊張感とやりがいがあります。',
   },
-  {
-    id: 'miseki-towa',
-    name: '三関永遠',
-    role: 'アシスタント',
-    imageSrc: '/images/miseki-towa.jpg',
-    text: 'お客様が帰られたあとの会話も含めて、チームで仕事をしている感覚があります。一人で抱え込まず、成長できる場所だと思います。',
-  },
 ] as const
 
 export function Recruit() {
