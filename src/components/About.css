@@ -1,6 +1,24 @@
 .about {
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-gray-100);
+  position: relative;
+  overflow: hidden;
+  background-color: var(--body-bg);
+  border-bottom: 1px solid var(--body-text);
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--body-text),
+    transparent
+  );
+  animation: about-line 7s linear infinite;
 }
 
 .about__grid {
@@ -8,14 +26,106 @@
   gap: 2rem;
 }
 
+.about__intro {
+  position: relative;
+}
+
+.about__orb {
+  position: absolute;
+  left: -2rem;
+  top: -1.5rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: rgba(226, 27, 34, 0.16);
+  filter: blur(42px);
+  pointer-events: none;
+  animation: about-orb 8s ease-in-out infinite;
+}
+
+.about__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.about__plus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  line-height: 1;
+  animation: about-plus 2.4s ease-in-out infinite;
+}
+
 .about__body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  color: var(--color-gray-600);
+  color: var(--body-muted);
   font-weight: 300;
   font-size: 1.05rem;
   max-width: 38rem;
+}
+
+.about__intro,
+.about__body {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.about.is-visible .about__intro {
+  animation: about-rise 0.85s var(--ease-out) 0.05s both;
+}
+
+.about.is-visible .about__body {
+  animation: about-rise 0.85s var(--ease-out) 0.2s both;
+}
+
+@keyframes about-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes about-line {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes about-orb {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(18%, 12%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes about-plus {
+  0%,
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(226, 27, 34, 0);
+  }
+  50% {
+    transform: scale(1.14);
+    text-shadow: 0 0 12px rgba(226, 27, 34, 0.7);
+  }
 }
 
 @media (min-width: 768px) {
