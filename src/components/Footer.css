@@ -1,6 +1,7 @@
 .footer {
-  background-color: var(--color-black);
-  color: var(--color-gray-400);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  border-top: 1px solid var(--color-gray-200);
   padding-block: 2.75rem;
 }
 
@@ -27,6 +28,22 @@
 .footer__copy {
   font-size: 0.8rem;
   letter-spacing: 0.06em;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.footer__nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--color-charcoal);
+}
+
+.footer__nav a:hover {
+  color: var(--accent-color);
 }
 
 @media (min-width: 768px) {
