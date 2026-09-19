@@ -1,25 +1,19 @@
 import { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Header.css'
 
 const NAV_ITEMS = [
-  { href: '#company', label: '会社情報' },
-  { href: '#business', label: '事業内容' },
-  { href: '#contact', label: 'お問い合わせ' },
+  { to: '/', label: 'トップ', en: 'Top' },
+  { to: '/company', label: '会社情報', en: 'Company' },
+  { to: '/business', label: '事業内容', en: 'Business' },
+  { to: '/staff', label: 'スタッフ', en: 'Staff' },
+  { to: '/recruit', label: '求人採用', en: 'Recruit' },
+  { to: '/contact', label: 'お問い合わせ', en: 'Contact' },
 ] as const
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => {
-      setIsScrolled(window.scrollY > 12)
-    }
-
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const { pathname } = useLocation()
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -28,20 +22,39 @@ export function Header() {
     }
   }, [isMenuOpen])
 
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
+
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className={`header${isScrolled ? ' header--scrolled' : ''}`}>
+    <header className="header">
+      <div className="header__bar" aria-hidden="true" />
       <div className="header__inner container">
-        <a href="#top" className="header__logo" onClick={closeMenu}>
+        <Link to="/" className="header__logo" onClick={closeMenu}>
           <img src="/images/logo-alpha.png" alt=" alpha" width={120} height={56} />
-        </a>
+        </Link>
 
         <nav className="header__nav" aria-label="メインナビゲーション">
           <ul className="header__nav-list">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <a href={item.href}>{item.label}</a>
+            {NAV_ITEMS.map((item, index) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) =>
+                    `header__link${item.to === '/contact' ? ' header__link--contact' : ''}${isActive ? ' active' : ''}`
+                  }
+                >
+                  <span className="header__link-text">
+                    <span className="header__link-index">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="header__link-en">{item.en}</span>
+                    <span className="header__link-ja">{item.label}</span>
+                  </span>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -67,11 +80,16 @@ export function Header() {
       >
         <nav aria-label="モバイルナビゲーション">
           <ul>
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} onClick={closeMenu}>
+            {NAV_ITEMS.map((item, index) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  end={item.to === '/'}
+                  onClick={closeMenu}
+                >
+                  <span>{String(index + 1).padStart(2, '0')}</span>
                   {item.label}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
