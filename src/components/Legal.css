@@ -1,0 +1,48 @@
+.legal.section {
+  background-color: var(--body-bg);
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.legal__updated {
+  color: var(--body-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+
+.legal__body {
+  display: grid;
+  gap: 2rem;
+  max-width: 42rem;
+}
+
+.legal__body h2 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.legal__body p,
+.legal__body li {
+  color: var(--body-muted);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.legal__body ul {
+  display: grid;
+  gap: 0.4rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.legal__body a {
+  border-bottom: 1px solid var(--body-line);
+}
+
+.legal__body a:hover {
+  border-bottom-color: var(--body-text);
+}
