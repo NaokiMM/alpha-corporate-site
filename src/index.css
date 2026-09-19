@@ -10,10 +10,16 @@
   --accent-color: #e21b22;
   --accent-color-soft: rgba(226, 27, 34, 0.08);
 
-  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --body-bg: #0d0c0b;
+  --body-text: #f4f3f1;
+  --body-muted: #b4b1aa;
+  --body-line: #3d3b37;
+  --surface: #161513;
+
+  --font-serif: 'Noto Serif JP', 'Cormorant Garamond', 'Times New Roman', serif;
   --font-sans: 'Outfit', 'Helvetica Neue', sans-serif;
 
-  --header-height: 72px;
+  --header-height: 88px;
   --content-width: 1080px;
   --section-pad-y: clamp(4.5rem, 10vw, 7.5rem);
   --section-pad-x: clamp(1.25rem, 4vw, 2.5rem);
@@ -51,14 +57,27 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
-  color: var(--color-charcoal);
-  background-color: var(--color-white);
+  color: var(--body-text);
+  background-color: var(--body-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
   min-height: 100svh;
+}
+
+.page {
+  padding-top: var(--header-height);
+  min-height: 100svh;
+}
+
+.page--compact {
+  min-height: 0;
+}
+
+.page-action {
+  margin-top: 1.75rem;
 }
 
 img {
@@ -83,11 +102,12 @@ button {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   line-height: 1.25;
-  color: var(--color-black);
+  color: var(--body-text);
   margin: 0;
 }
 
@@ -129,7 +149,7 @@ ul {
 
 .section-lead {
   max-width: 36rem;
-  color: var(--color-gray-600);
+  color: var(--body-muted);
   font-weight: 300;
   font-size: 1.05rem;
 }
@@ -162,13 +182,13 @@ ul {
 
 .btn-ghost {
   background-color: transparent;
-  color: var(--color-charcoal);
-  border-color: var(--color-gray-200);
+  color: var(--body-text);
+  border-color: var(--body-line);
 }
 
 .btn-ghost:hover {
-  border-color: var(--color-charcoal);
-  color: var(--color-black);
+  border-color: var(--body-text);
+  color: var(--color-white);
 }
 
 .sr-only {
