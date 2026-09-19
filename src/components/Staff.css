@@ -1,0 +1,273 @@
+.staff {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--body-bg);
+}
+
+.staff::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--body-text),
+    transparent
+  );
+  animation: staff-line 7s linear infinite;
+}
+
+.staff__header {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.staff__orb {
+  position: absolute;
+  left: -2rem;
+  top: -1.5rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: rgba(226, 27, 34, 0.16);
+  filter: blur(42px);
+  pointer-events: none;
+  animation: staff-orb 8s ease-in-out infinite;
+}
+
+.staff__title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.staff__title-icon {
+  width: 1.55rem;
+  height: 1.55rem;
+  color: var(--accent-color);
+  animation: staff-icon 2.6s ease-in-out infinite;
+}
+
+.staff__group-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.staff__group-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  animation: staff-dot 2.2s ease-out infinite;
+}
+
+.staff-card__award img {
+  animation: staff-trophy 2.4s ease-in-out infinite;
+}
+
+.staff__group + .staff__group {
+  margin-top: 3.25rem;
+}
+
+.staff__group-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--body-text);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--body-line);
+}
+
+.staff__group-en {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gray-400);
+}
+
+.staff__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--surface);
+  border: 1px solid var(--body-line);
+}
+
+.staff-card__media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-gray-100);
+}
+
+.staff-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 16%;
+}
+
+.staff-card__media--placeholder {
+  background: linear-gradient(135deg, var(--color-gray-100), var(--color-gray-200));
+}
+
+.staff-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.85rem 0.9rem 1rem;
+}
+
+.staff-card__role {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--body-text);
+  border: 1px solid var(--body-line);
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.staff-card__name-en {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gray-400);
+  margin-bottom: 0.15rem;
+}
+
+.staff-card__name {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.staff-card__award {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #e8d5a3;
+  margin-bottom: 0.45rem;
+  line-height: 1.45;
+}
+
+.staff-card__award img {
+  width: 1.65rem;
+  height: 1.65rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@keyframes staff-line {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes staff-orb {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate(18%, 12%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes staff-icon {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(226, 27, 34, 0));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px rgba(226, 27, 34, 0.55));
+  }
+}
+
+@keyframes staff-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(226, 27, 34, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(226, 27, 34, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(226, 27, 34, 0);
+  }
+}
+
+@keyframes staff-trophy {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-6deg);
+  }
+}
+
+.staff-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.staff-card__tags li {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--body-muted);
+  border: 1px solid var(--body-line);
+  padding: 0.12rem 0.4rem;
+}
+
+.staff-card__text {
+  color: var(--body-muted);
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+  .staff__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+
+  .staff-card__body {
+    padding: 1rem 1.05rem 1.15rem;
+  }
+
+  .staff-card__name {
+    font-size: 1.15rem;
+  }
+}
