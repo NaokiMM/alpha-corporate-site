@@ -1,0 +1,248 @@
+.sns {
+  background-color: var(--body-bg);
+}
+
+.sns .section-label {
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.sns .section-title {
+  font-size: clamp(2.1rem, 4.5vw, 3rem);
+}
+
+.sns__layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.sns__official {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.sns__official-link {
+  display: grid;
+  justify-items: center;
+  gap: 0.55rem;
+}
+
+.sns__official-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  isolation: isolate;
+}
+
+.sns__official-icon svg {
+  position: relative;
+  z-index: 1;
+  width: 3.15rem;
+  height: 3.15rem;
+  display: block;
+  border-radius: 0.9rem;
+}
+
+.sns__story-ring {
+  position: absolute;
+  inset: -0.28rem;
+  border-radius: 1.2rem;
+  background: conic-gradient(
+    from 0deg,
+    #f9ce34,
+    #ee2a7b,
+    #6228d7,
+    #3381f7,
+    #f9ce34
+  );
+  animation: sns-story 3.8s linear infinite;
+  z-index: 0;
+}
+
+.sns__story-ring::after {
+  content: '';
+  position: absolute;
+  inset: 2.5px;
+  border-radius: 1.05rem;
+  background-color: var(--body-bg);
+}
+
+.sns__story-ring--sm {
+  inset: -0.22rem;
+  border-radius: 0.85rem;
+}
+
+.sns__story-ring--sm::after {
+  inset: 2px;
+  border-radius: 0.72rem;
+}
+
+.sns__official-icon--instagram {
+  animation: sns-pulse 2.8s ease-in-out infinite;
+}
+
+.sns__official-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--body-muted);
+}
+
+.sns__official-link:hover .sns__official-icon {
+  transform: scale(1.06);
+}
+
+.sns__official-link:hover .sns__official-name {
+  color: var(--body-text);
+}
+
+.sns__official-link:hover .sns__story-ring {
+  animation-duration: 1.4s;
+}
+
+.sns__followers {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--body-text);
+  line-height: 1.45;
+}
+
+.sns__followers-count {
+  display: block;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  letter-spacing: 0.04em;
+  color: var(--accent-color);
+  background: linear-gradient(
+    90deg,
+    #f9ce34 0%,
+    #ee2a7b 40%,
+    #e21b22 70%,
+    #f9ce34 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sns-shimmer 4.5s linear infinite;
+}
+
+.sns__followers-note {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--color-gray-400);
+}
+
+.sns__list {
+  border-top: 1px solid var(--body-line);
+}
+
+.sns__link {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: 1.15rem;
+  border-bottom: 1px solid var(--body-line);
+}
+
+.sns__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sns__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  flex-shrink: 0;
+}
+
+.sns__icon svg {
+  position: relative;
+  z-index: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: block;
+  border-radius: 0.55rem;
+}
+
+.sns__icon--instagram {
+  animation: sns-pulse 3.2s ease-in-out infinite;
+}
+
+.sns__name {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gray-400);
+}
+
+.sns__handle {
+  font-size: 1.35rem;
+  color: var(--body-text);
+}
+
+.sns__note {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--body-muted);
+}
+
+.sns__link:hover .sns__handle {
+  color: var(--accent-color);
+}
+
+@keyframes sns-story {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sns-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.045);
+  }
+}
+
+@keyframes sns-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .sns__layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .sns__link {
+    grid-template-columns: 11rem 1fr auto;
+    gap: 1.25rem;
+    align-items: center;
+    padding-block: 1.35rem;
+  }
+}
