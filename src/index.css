@@ -10,11 +10,11 @@
   --accent-color: #e21b22;
   --accent-color-soft: rgba(226, 27, 34, 0.08);
 
-  --body-bg: #0d0c0b;
-  --body-text: #f4f3f1;
-  --body-muted: #b4b1aa;
-  --body-line: #3d3b37;
-  --surface: #161513;
+  --body-bg: #ffffff;
+  --body-text: #1a1917;
+  --body-muted: #5c5954;
+  --body-line: rgba(226, 27, 34, 0.28);
+  --surface: #ffffff;
 
   --font-serif: 'Noto Serif JP', 'Cormorant Garamond', 'Times New Roman', serif;
   --font-sans: 'Outfit', 'Helvetica Neue', sans-serif;
@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -177,17 +178,18 @@ ul {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-black);
+  background-color: #b01016;
 }
 
 .btn-ghost {
   background-color: transparent;
-  color: var(--body-text);
-  border-color: var(--body-line);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .btn-ghost:hover {
-  border-color: var(--body-text);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
   color: var(--color-white);
 }
 

@@ -3,8 +3,8 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  background-color: var(--body-bg);
-  border-top: 1px solid var(--body-text);
+  background-color: #1a1917;
+  border-top: 1px solid var(--accent-color);
   height: min(72vh, 46rem);
 }
 

@@ -99,7 +99,7 @@
 }
 
 .contact__tel:hover {
-  border-bottom-color: var(--body-text);
+  border-bottom-color: var(--accent-color);
 }
 
 @media (min-width: 768px) {

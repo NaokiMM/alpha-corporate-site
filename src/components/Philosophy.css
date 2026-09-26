@@ -1,6 +1,6 @@
 .philosophy {
   background-color: var(--body-bg);
-  border-bottom: 1px solid var(--body-text);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .philosophy__layout {

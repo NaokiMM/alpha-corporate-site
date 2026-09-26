@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--body-bg);
-  border-top: 1px solid var(--body-text);
+  border-top: 1px solid var(--accent-color);
 }
 
 .clients::before {
@@ -15,7 +15,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--body-text),
+    var(--accent-color),
     transparent
   );
   animation: clients-line 7s linear infinite;

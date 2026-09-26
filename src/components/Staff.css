@@ -14,7 +14,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--body-text),
+    var(--accent-color),
     transparent
   );
   animation: staff-line 7s linear infinite;

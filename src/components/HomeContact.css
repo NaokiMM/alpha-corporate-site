@@ -2,7 +2,7 @@
   background-color: var(--body-bg);
   color: var(--body-text);
   padding-block: clamp(5rem, 14vw, 9.5rem);
-  border-top: 1px solid var(--body-text);
+  border-top: 1px solid var(--accent-color);
 }
 
 .home-contact .container {
@@ -48,21 +48,22 @@
 }
 
 .home-contact__link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
-  color: var(--body-text);
-  border-bottom: 1px solid var(--body-line);
-  padding-bottom: 0.35rem;
-  transition:
-    color 0.3s var(--ease-out),
-    border-color 0.3s var(--ease-out);
+  letter-spacing: 0.16em;
+  color: var(--color-white);
+  background-color: var(--accent-color);
+  transition: background-color 0.3s var(--ease-out);
 }
 
 .home-contact__link:hover {
-  color: var(--accent-color);
-  border-bottom-color: var(--accent-color);
+  color: var(--color-white);
+  background-color: #b01016;
 }
 
 @media (min-width: 768px) {

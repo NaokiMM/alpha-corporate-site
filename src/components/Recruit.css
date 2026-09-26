@@ -9,7 +9,7 @@
   display: flex;
   align-items: flex-start;
   height: min(62vh, 38rem);
-  background-color: var(--body-bg);
+  background-color: #1a1917;
 }
 
 .recruit__media video {
@@ -209,7 +209,7 @@
 }
 
 .recruit__tel:hover {
-  border-bottom-color: var(--body-text);
+  border-bottom-color: var(--accent-color);
 }
 
 .recruit__note {
@@ -225,7 +225,7 @@
 }
 
 .recruit__note a:hover {
-  border-bottom-color: var(--body-text);
+  border-bottom-color: var(--accent-color);
 }
 
 @media (min-width: 768px) {

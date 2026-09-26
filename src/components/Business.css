@@ -14,7 +14,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--body-text),
+    var(--accent-color),
     transparent
   );
   animation: business-line 7s linear infinite;
@@ -129,7 +129,7 @@
 }
 
 .business-card:hover {
-  border-color: var(--color-gray-400);
+  border-color: var(--accent-color);
 }
 
 .business-card__media {
@@ -145,7 +145,7 @@
 }
 
 .business-card--contain .business-card__media {
-  background-color: #0d0c0b;
+  background-color: var(--color-white);
 }
 
 .business-card--contain .business-card__media img {
@@ -153,7 +153,7 @@
 }
 
 .business-card--original .business-card__media {
-  background-color: #0d0c0b;
+  background-color: var(--color-white);
 }
 
 .business-card--original .business-card__media img {
@@ -234,7 +234,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: var(--body-text);
+  background-color: var(--accent-color);
 }
 
 .business-card__stack {
@@ -358,9 +358,9 @@
   align-items: center;
   margin-top: auto;
   padding: 0.85rem 0.95rem;
-  border: 1px solid #c6a15b;
+  border: 1px solid var(--accent-color);
   background:
-    linear-gradient(135deg, rgba(198, 161, 91, 0.12), rgba(13, 12, 11, 0.4));
+    linear-gradient(135deg, rgba(226, 27, 34, 0.08), rgba(226, 27, 34, 0.02));
 }
 
 .business-card__award img {
@@ -373,7 +373,7 @@
   font-family: var(--font-serif);
   font-size: 1.45rem;
   letter-spacing: 0.08em;
-  color: #e8d5a3;
+  color: var(--accent-color);
   line-height: 1.2;
   margin-bottom: 0.25rem;
 }

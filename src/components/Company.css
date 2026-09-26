@@ -1,6 +1,6 @@
 .company {
   background-color: var(--body-bg);
-  border-bottom: 1px solid var(--body-text);
+  border-bottom: 1px solid var(--accent-color);
   padding-block: 0 var(--section-pad-y);
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   align-items: flex-start;
   height: min(62vh, 38rem);
-  background-color: var(--body-bg);
+  background-color: #1a1917;
 }
 
 .company__media video {

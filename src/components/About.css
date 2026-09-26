@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--body-bg);
-  border-bottom: 1px solid var(--body-text);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .about::before {
@@ -15,7 +15,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--body-text),
+    var(--accent-color),
     transparent
   );
   animation: about-line 7s linear infinite;

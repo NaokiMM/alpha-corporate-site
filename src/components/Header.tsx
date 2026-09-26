@@ -85,6 +85,9 @@ export function Header() {
                 <NavLink
                   to={item.to}
                   end={item.to === '/'}
+                  className={
+                    item.to === '/contact' ? 'header__drawer-link--contact' : undefined
+                  }
                   onClick={closeMenu}
                 >
                   <span>{String(index + 1).padStart(2, '0')}</span>
