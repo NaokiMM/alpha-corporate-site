@@ -7,6 +7,7 @@ import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PrivacyPage } from './pages/PrivacyPage'
 import { RecruitPage } from './pages/RecruitPage'
+import { SalonPage } from './pages/SalonPage'
 import { StaffPage } from './pages/StaffPage'
 import { TermsPage } from './pages/TermsPage'
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/company" element={<CompanyPage />} />
           <Route path="/business" element={<BusinessPage />} />
+          <Route path="/salon" element={<SalonPage />} />
           <Route path="/staff" element={<StaffPage />} />
           <Route path="/recruit" element={<RecruitPage />} />
           <Route path="/contact" element={<ContactPage />} />

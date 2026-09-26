@@ -2,6 +2,17 @@
   position: relative;
   overflow: hidden;
   background-color: var(--body-bg);
+  padding-top: 0;
+}
+
+.staff__scene {
+  margin: 0;
+}
+
+.staff__scene img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .staff::before {
@@ -22,6 +33,7 @@
 
 .staff__header {
   position: relative;
+  margin-top: var(--section-pad-y);
   margin-bottom: 2.5rem;
 }
 

@@ -1,0 +1,56 @@
+.salon-slider {
+  position: relative;
+  background-color: var(--body-bg);
+}
+
+.salon-slider__viewport {
+  overflow: hidden;
+}
+
+.salon-slider__track {
+  display: flex;
+  transition: transform 0.8s var(--ease-out);
+  will-change: transform;
+}
+
+.salon-slider__track.is-instant {
+  transition: none;
+}
+
+.salon-slider__slide {
+  flex: 0 0 100%;
+  margin: 0;
+  min-width: 0;
+}
+
+.salon-slider__slide img {
+  width: 100%;
+  height: min(72vh, 40rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.salon-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  padding-top: 0.9rem;
+}
+
+.salon-slider__dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: rgba(26, 25, 23, 0.22);
+}
+
+.salon-slider__dots button.is-active {
+  background-color: var(--accent-color);
+  transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salon-slider__track {
+    transition: none;
+  }
+}

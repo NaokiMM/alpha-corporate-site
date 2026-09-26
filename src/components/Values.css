@@ -1,5 +1,11 @@
 .values {
   background-color: var(--body-bg);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.values .section-title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .values__layout {
@@ -10,11 +16,12 @@
 .values__catch {
   position: relative;
   font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--body-text);
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .values__mark {
@@ -42,10 +49,19 @@
 }
 
 .values__text {
-  color: var(--body-muted);
-  font-weight: 300;
+  font-family: var(--font-serif);
+  color: var(--body-text);
+  font-weight: 500;
   font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
   max-width: 36rem;
+}
+
+@media (max-width: 767px) {
+  .values__text br {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {

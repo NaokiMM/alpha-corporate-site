@@ -3,18 +3,102 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
+.philosophy .section-title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
 .philosophy__layout {
   display: grid;
   gap: 2.5rem;
 }
 
+.philosophy__question {
+  margin: -0.35rem 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  color: var(--body-text);
+}
+
+.philosophy__creed {
+  margin-top: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.philosophy__creed-title {
+  margin-bottom: 1.35rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.philosophy__principles {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.philosophy__principle {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem 1.15rem;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background-color: var(--accent-color-soft);
+}
+
+.philosophy__badge {
+  display: grid;
+  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.philosophy__line {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.85;
+  color: var(--body-text);
+}
+
+@media (max-width: 767px) {
+  .philosophy__principle {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .philosophy__line-break {
+    display: none;
+  }
+}
+
 .philosophy__catch {
   font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--body-text);
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.philosophy__phrase {
+  white-space: nowrap;
 }
 
 .philosophy__plus {
@@ -36,14 +120,23 @@
 }
 
 .philosophy__text {
-  color: var(--body-muted);
-  font-weight: 300;
+  font-family: var(--font-serif);
+  color: var(--body-text);
+  font-weight: 500;
   font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  line-height: 2;
   max-width: 36rem;
 }
 
 .philosophy__text + .philosophy__text {
   margin-top: 1.15rem;
+}
+
+@media (max-width: 767px) {
+  .philosophy__text br {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {

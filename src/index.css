@@ -16,8 +16,8 @@
   --body-line: rgba(226, 27, 34, 0.28);
   --surface: #ffffff;
 
-  --font-serif: 'Noto Serif JP', 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-sans: 'Outfit', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Noto Serif JP', 'Times New Roman', serif;
+  --font-sans: 'Cormorant Garamond', 'Outfit', 'Helvetica Neue', sans-serif;
 
   --header-height: 88px;
   --content-width: 1080px;

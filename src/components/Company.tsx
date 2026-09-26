@@ -8,7 +8,7 @@ interface CompanyRow {
 
 const COMPANY_ROWS: CompanyRow[] = [
   { label: '会社名', value: '株式会社 alpha', icon: 'building' },
-  { label: '所在地', value: '東京都新宿区新宿３-14-23　新宿マヤビル ６F', icon: 'pin' },
+  { label: '所在地', value: '東京都新宿区新宿３-14-23　新宿マヤビル\u00A0６\u2060F', icon: 'pin' },
   { label: '代表者', value: '木村奏也', icon: 'person' },
   { label: '設立', value: '2022年', icon: 'calendar' },
   { label: '電話番号', value: '03-6709-8378', icon: 'phone' },
@@ -130,27 +130,13 @@ export function Company() {
     <section
       id="company"
       className="section company"
-      aria-labelledby="company-heading"
+      aria-labelledby="company-overview-heading"
     >
-      <div className="company__media">
-        <video autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
-          <source
-            src="/video/3051316-hd_1920_1080_24fps.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div className="company__veil" aria-hidden="true" />
-        <div className="company__media-copy">
-          <span className="company__media-en">Company</span>
-          <h1 id="company-heading" className="company__media-title">
-            会社情報
-          </h1>
-        </div>
-      </div>
-
       <div className="container company__layout">
         <div className="company__intro">
-          <h2 className="section-title">会社概要</h2>
+          <h2 id="company-overview-heading" className="section-title">
+            会社概要
+          </h2>
         </div>
 
         <dl className="company__table">

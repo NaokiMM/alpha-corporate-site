@@ -3,6 +3,11 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
+.history .section-title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
 .history__layout {
   display: grid;
   gap: 2.5rem;
@@ -61,7 +66,10 @@
 }
 
 .history__item li {
+  font-family: var(--font-serif);
   font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: var(--body-text);
 }
 

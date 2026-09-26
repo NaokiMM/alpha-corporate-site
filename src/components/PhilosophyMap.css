@@ -1,0 +1,162 @@
+.philosophy-map {
+  background-color: var(--body-bg);
+  border-bottom: 1px solid var(--accent-color);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.philosophy-map__title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.philosophy-map__map {
+  display: grid;
+  justify-items: center;
+  row-gap: 0;
+}
+
+.philosophy-map__origin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.35rem;
+}
+
+.philosophy-map__origin::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1px;
+  height: 1.35rem;
+  background-color: var(--accent-color);
+}
+
+.philosophy-map__stem {
+  width: 1px;
+  height: 1.35rem;
+  background-color: var(--accent-color);
+}
+
+.philosophy-map__node {
+  margin: 0;
+  min-width: min(100%, 12.5rem);
+  padding: 0.9rem 1.15rem;
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.philosophy-map__branches {
+  position: relative;
+  width: min(100%, 28rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.philosophy-map__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0.62rem 0.9rem;
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.philosophy-map__index {
+  flex: none;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.philosophy-map__index::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 0.85em;
+  margin-left: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.72);
+  vertical-align: -0.08em;
+}
+
+.philosophy-map__note::before {
+  content: '—';
+  margin-inline: 0.45em;
+}
+
+@media (min-width: 1024px) {
+  .philosophy-map__map {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    justify-items: stretch;
+  }
+
+  .philosophy-map__origin {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 1.75rem;
+  }
+
+  .philosophy-map__origin::after {
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 50%;
+    width: 1.75rem;
+    height: 1px;
+  }
+
+  .philosophy-map__stem {
+    width: 1.75rem;
+    height: 1px;
+  }
+
+  .philosophy-map__branches {
+    width: max-content;
+    max-width: 100%;
+    justify-self: start;
+    padding-left: 1.35rem;
+  }
+
+  .philosophy-map__branches li {
+    position: relative;
+  }
+
+  .philosophy-map__branches li::before {
+    content: '';
+    position: absolute;
+    left: -1.35rem;
+    top: 50%;
+    width: 1.35rem;
+    height: 1px;
+    background-color: var(--accent-color);
+  }
+
+  .philosophy-map__branches li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -1.35rem;
+    top: 50%;
+    width: 1px;
+    height: calc(100% + 0.55rem);
+    background-color: var(--accent-color);
+  }
+}

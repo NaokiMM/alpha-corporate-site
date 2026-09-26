@@ -83,6 +83,14 @@ export function Staff() {
 
   return (
     <section id="staff" className="section staff" aria-labelledby="staff-heading">
+      <figure className="staff__scene">
+        <img
+          src="/images/salon-interior.jpg"
+          alt="白い壁と鏡、黒いチェアが並ぶサロンの店内"
+          width={768}
+          height={492}
+        />
+      </figure>
       <div className="container">
         <div className="staff__header">
           <span className="staff__orb" aria-hidden="true" />

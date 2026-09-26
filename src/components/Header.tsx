@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { to: '/', label: 'トップ', en: 'Top' },
   { to: '/company', label: '会社情報', en: 'Company' },
   { to: '/business', label: '事業内容', en: 'Business' },
+  { to: '/salon', label: 'サロン', en: 'Salon' },
   { to: '/staff', label: 'スタッフ', en: 'Staff' },
   { to: '/recruit', label: '求人採用', en: 'Recruit' },
   { to: '/contact', label: 'お問い合わせ', en: 'Contact' },
